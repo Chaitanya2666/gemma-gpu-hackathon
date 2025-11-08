@@ -7,8 +7,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# Set Streamlit to use port 8080
-ENV STREAMLIT_SERVER_PORT=8080
-ENV STREAMLIT_SERVER_ADDRESS=0.0.0.0
-
+# Fix: Streamlit ko port 8080 use karne ko bolo
 CMD ["streamlit", "run", "app.py", "--server.port=8080", "--server.address=0.0.0.0"]
